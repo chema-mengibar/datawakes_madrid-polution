@@ -1,0 +1,26 @@
+{
+  "info":{
+    "name":"A01_extract-zip-years_v01",
+    "version":"1.0",
+    "description":"Extract years csv files",
+    "created":"2018.09.10",
+    "executed":"",
+    "blocked":1
+  },
+  "params":{},
+  "inputs":[
+    {
+      "data_source":"dir",
+      "domain":"stage",
+      "collection":"S01_A00_extract-zip_v01",
+      "docs":["csvs_per_year.zip"]
+    }
+  ],
+  "output":{
+    "data_source":"dir",
+    "domain":"stage",
+    "collection":"",
+    "add_date":false
+  },
+  "comment":""
+}

@@ -1,0 +1,29 @@
+{
+  "info":{
+    "name":"TOOL_map_v001",
+    "version":"1.0",
+    "description":"map test",
+    "created":"2018.09.12",
+    "executed":"",
+    "blocked":0
+  },
+  "params":{},
+  "inputs":[
+    {
+      "data_source":"dir",
+      "domain":"master",
+      "collection":"ds-codigos-postales-master",
+      "docs":[
+        "MADRID.geojson"
+      ]
+    }
+
+  ],
+  "output":{
+    "data_source":"dir",
+    "domain":"processed",
+    "collection":"",
+    "add_date":false
+  },
+  "comment":""
+}
