@@ -12,7 +12,7 @@ class Router(object):
         #self.data_captures = os.path.dirname(os.path.realpath(__file__))
 
         self.rootFolder = 'datawakes_madrid-polution'
-        self.root = '[ABSOLUTE_LOCAL_PATH]' + self.rootFolder +  '\\'
+        self.root = '[ABSOLUTE_LOCAL_PATH_TO_PROJECT_FOLDER]' + self.rootFolder +  '\\'
 
         self.universe =  self.root + 'universe\\'
         self.processed =  self.root + 'universe\\PROCESSED\\'
