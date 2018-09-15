@@ -1,0 +1,740 @@
+Geometries 0
+(59, 0.05, 4)
+Geometries 1
+(925, 0.0462, 44)
+Geometries 2
+(712, 0.0356, 26)
+Geometries 3
+(697, 0.0348, 25)
+Geometries 4
+(615, 0.0307, 19)
+Geometries 5
+(81, 0.05, 5)
+Geometries 6
+(85, 0.05, 5)
+Geometries 7
+(109, 0.05, 6)
+Geometries 8
+(93, 0.05, 5)
+Geometries 9
+(13, 0.15, 2)
+Geometries 10
+(87, 0.05, 5)
+Geometries 11
+(88, 0.05, 6)
+Geometries 12
+(94, 0.05, 5)
+Geometries 13
+(92, 0.05, 5)
+Geometries 14
+(99, 0.05, 5)
+Geometries 15
+(55, 0.05, 4)
+Geometries 16
+(101, 0.05, 6)
+Geometries 17
+(1436, 0.0144, 21)
+Geometries 18
+(108, 0.05, 7)
+Geometries 19
+(134, 0.05, 7)
+Geometries 20
+(1342, 0.0134, 18)
+Geometries 21
+(1089, 0.0109, 12)
+Geometries 22
+(605, 0.0302, 19)
+Geometries 23
+(277, 0.0138, 4)
+Geometries 24
+(433, 0.0216, 10)
+Geometries 25
+(987, 0.0493, 49)
+Geometries 26
+(412, 0.0206, 9)
+Geometries 27
+(1289, 0.0129, 17)
+Geometries 28
+(1278, 0.0128, 17)
+Geometries 29
+(187, 0.05, 10)
+Geometries 30
+(238, 0.0119, 4)
+Geometries 31
+(478, 0.0239, 12)
+Geometries 32
+(436, 0.0218, 10)
+Geometries 33
+(206, 0.0103, 4)
+Geometries 34
+(1002, 0.01, 11)
+Geometries 35
+(1236, 0.0124, 16)
+Geometries 36
+(1185, 0.0118, 14)
+Geometries 37
+(661, 0.033, 23)
+Geometries 38
+(9, 0.15, 2)
+Geometries 39
+(541, 0.027, 15)
+Geometries 40
+(1127, 0.0113, 13)
+Geometries 41
+(122, 0.05, 7)
+Geometries 42
+(442, 0.0221, 10)
+Geometries 43
+(1300, 0.013, 17)
+Geometries 44
+(65, 0.05, 4)
+Geometries 45
+(157, 0.05, 9)
+Geometries 46
+(267, 0.0133, 4)
+Geometries 47
+(208, 0.0104, 4)
+Geometries 48
+(187, 0.05, 10)
+Geometries 49
+(296, 0.0148, 6)
+Geometries 50
+(430, 0.0215, 10)
+Geometries 51
+(159, 0.05, 8)
+Geometries 52
+(576, 0.0288, 17)
+Geometries 53
+(193, 0.05, 10)
+Geometries 54
+(110, 0.05, 6)
+Geometries 55
+(456, 0.0228, 11)
+Geometries 56
+(15, 0.15, 4)
+Geometries 57
+(13, 0.15, 2)
+Geometries 58
+(306, 0.0153, 5)
+Geometries 59
+(607, 0.0303, 19)
+Geometries 60
+(126, 0.05, 8)
+Geometries 61
+(365, 0.0182, 8)
+Geometries 62
+(1089, 0.0109, 12)
+Geometries 63
+(1082, 0.0108, 12)
+Geometries 64
+(582, 0.0291, 17)
+Geometries 65
+(805, 0.0402, 34)
+Geometries 66
+(93, 0.05, 5)
+Geometries 67
+(232, 0.0116, 4)
+Geometries 68
+(15, 0.15, 4)
+Geometries 69
+(67, 0.05, 4)
+Geometries 70
+(133, 0.05, 7)
+Geometries 71
+(115, 0.05, 6)
+Geometries 72
+(135, 0.05, 7)
+Geometries 73
+(81, 0.05, 5)
+Geometries 74
+(199, 0.05, 10)
+Geometries 75
+(924, 0.0462, 44)
+Geometries 76
+(207, 0.0103, 4)
+Geometries 77
+(834, 0.0417, 35)
+Geometries 78
+(726, 0.0363, 28)
+Geometries 79
+(1243, 0.0124, 16)
+Geometries 80
+(35, 0.15, 6)
+Geometries 81
+(842, 0.0421, 36)
+Geometries 82
+(854, 0.0427, 37)
+Geometries 83
+(442, 0.0221, 10)
+Geometries 84
+(515, 0.0257, 14)
+Geometries 85
+(751, 0.0375, 29)
+Geometries 86
+(406, 0.0203, 9)
+Geometries 87
+(1151, 0.0115, 14)
+Geometries 88
+(380, 0.019, 8)
+Geometries 89
+(112, 0.05, 6)
+Geometries 90
+(351, 0.0175, 7)
+Geometries 91
+(81, 0.05, 5)
+Geometries 92
+(40, 0.15, 7)
+Geometries 93
+(383, 0.0191, 8)
+Geometries 94
+(1214, 0.0121, 15)
+Geometries 95
+(543, 0.0271, 15)
+Geometries 96
+(59, 0.05, 4)
+Geometries 97
+(217, 0.0108, 4)
+Geometries 98
+(884, 0.0442, 40)
+Geometries 99
+(1343, 0.0134, 18)
+Geometries 100
+(1433, 0.0143, 21)
+Geometries 101
+(195, 0.05, 10)
+Geometries 102
+(43, 0.15, 7)
+Geometries 103
+(413, 0.0206, 10)
+Geometries 104
+(49, 0.15, 10)
+Geometries 105
+(267, 0.0133, 4)
+Geometries 106
+(714, 0.0357, 26)
+Geometries 107
+(1032, 0.0103, 11)
+Geometries 108
+(507, 0.0253, 13)
+Geometries 109
+(824, 0.0412, 34)
+Geometries 110
+(940, 0.047, 45)
+Geometries 111
+(305, 0.0152, 5)
+Geometries 112
+(815, 0.0407, 36)
+Geometries 113
+(322, 0.0161, 6)
+Geometries 114
+(2099, 0.021, 45)
+Geometries 115
+(83, 0.05, 5)
+Geometries 116
+(863, 0.0431, 38)
+Geometries 117
+(304, 0.0152, 5)
+Geometries 118
+(99, 0.05, 5)
+Geometries 119
+(1135, 0.0114, 13)
+Geometries 120
+(295, 0.0147, 5)
+Geometries 121
+(71, 0.05, 4)
+Geometries 122
+(106, 0.05, 6)
+Geometries 123
+(261, 0.013, 4)
+Geometries 124
+(56, 0.05, 4)
+Geometries 125
+(34, 0.15, 6)
+Geometries 126
+(43, 0.15, 7)
+Geometries 127
+(28, 0.15, 5)
+Geometries 128
+(1551, 0.0155, 25)
+Geometries 129
+(141, 0.05, 8)
+Geometries 130
+(2324, 0.0232, 54)
+Geometries 131
+(210, 0.0105, 4)
+Geometries 132
+(465, 0.0232, 11)
+Geometries 133
+(606, 0.0303, 19)
+Geometries 134
+(1059, 0.0106, 12)
+Geometries 135
+(1055, 0.0106, 12)
+Geometries 136
+(796, 0.0398, 32)
+Geometries 137
+(1498, 0.015, 23)
+Geometries 138
+(500, 0.025, 13)
+Geometries 139
+(303, 0.0151, 5)
+Geometries 140
+(1009, 0.0101, 11)
+Geometries 141
+(1022, 0.0102, 11)
+Geometries 142
+(1130, 0.0113, 13)
+Geometries 143
+(1079, 0.0108, 12)
+Geometries 144
+(584, 0.0292, 18)
+Geometries 145
+(73, 0.05, 4)
+Geometries 146
+(745, 0.0372, 29)
+Geometries 147
+(685, 0.0342, 24)
+Geometries 148
+(493, 0.0246, 13)
+Geometries 149
+(1360, 0.0136, 20)
+Geometries 150
+(261, 0.013, 4)
+Geometries 151
+(234, 0.0117, 4)
+Geometries 152
+(376, 0.0188, 8)
+Geometries 153
+(1301, 0.013, 18)
+Geometries 154
+(58, 0.05, 4)
+Geometries 155
+(484, 0.0242, 12)
+Geometries 156
+(154, 0.05, 8)
+Geometries 157
+(145, 0.05, 8)
+Geometries 158
+(73, 0.05, 4)
+Geometries 159
+(103, 0.05, 7)
+Geometries 160
+(425, 0.0212, 10)
+Geometries 161
+(32, 0.15, 5)
+Geometries 162
+(29, 0.15, 5)
+Geometries 163
+(66, 0.05, 4)
+Geometries 164
+(9, 0.15, 2)
+Geometries 165
+(59, 0.05, 4)
+Geometries 166
+(118, 0.05, 6)
+Geometries 167
+(68, 0.05, 4)
+Geometries 168
+(199, 0.05, 10)
+Geometries 169
+(112, 0.05, 6)
+Geometries 170
+(668, 0.0334, 23)
+Geometries 171
+(177, 0.05, 9)
+Geometries 172
+(839, 0.0419, 36)
+Geometries 173
+(1661, 0.0166, 28)
+Geometries 174
+(174, 0.05, 10)
+Geometries 175
+(526, 0.0263, 14)
+Geometries 176
+(60, 0.05, 4)
+Geometries 177
+(180, 0.05, 10)
+Geometries 178
+(580, 0.029, 17)
+Geometries 179
+(256, 0.0128, 4)
+Geometries 180
+(227, 0.0113, 4)
+Geometries 181
+(38, 0.15, 6)
+Geometries 182
+(96, 0.05, 5)
+Geometries 183
+(929, 0.0464, 44)
+Geometries 184
+(286, 0.0143, 5)
+Geometries 185
+(352, 0.0176, 7)
+Geometries 186
+(138, 0.05, 7)
+Geometries 187
+(111, 0.05, 6)
+Geometries 188
+(154, 0.05, 8)
+Geometries 189
+(598, 0.0299, 18)
+Geometries 190
+(566, 0.0283, 17)
+Geometries 191
+(674, 0.0337, 23)
+Geometries 192
+(79, 0.05, 4)
+Geometries 193
+(82, 0.05, 5)
+Geometries 194
+(693, 0.0346, 25)
+Geometries 195
+(148, 0.05, 8)
+Geometries 196
+(77, 0.05, 4)
+Geometries 197
+(189, 0.05, 10)
+Geometries 198
+(202, 0.0101, 4)
+Geometries 199
+(69, 0.05, 4)
+Geometries 200
+(232, 0.0116, 4)
+Geometries 201
+(82, 0.05, 5)
+Geometries 202
+(110, 0.05, 6)
+Geometries 203
+(455, 0.0227, 11)
+Geometries 204
+(190, 0.05, 10)
+Geometries 205
+(117, 0.05, 6)
+Geometries 206
+(175, 0.05, 10)
+Geometries 207
+(140, 0.05, 9)
+Geometries 208
+(12, 0.15, 2)
+Geometries 209
+(155, 0.05, 8)
+Geometries 210
+(315, 0.0157, 5)
+Geometries 211
+(38, 0.15, 6)
+Geometries 212
+(201, 0.01, 4)
+Geometries 213
+(167, 0.05, 9)
+Geometries 214
+(335, 0.0167, 6)
+Geometries 215
+(787, 0.0393, 31)
+Geometries 216
+(1960, 0.0196, 39)
+Geometries 217
+(204, 0.0102, 4)
+Geometries 218
+(201, 0.01, 4)
+Geometries 219
+(361, 0.018, 7)
+Geometries 220
+(108, 0.05, 6)
+Geometries 221
+(89, 0.05, 5)
+Geometries 222
+(71, 0.05, 4)
+Geometries 223
+(72, 0.05, 4)
+Geometries 224
+(188, 0.05, 10)
+Geometries 225
+(104, 0.05, 6)
+Geometries 226
+(454, 0.0227, 11)
+Geometries 227
+(623, 0.0311, 20)
+Geometries 228
+(285, 0.0142, 5)
+Geometries 229
+(394, 0.0197, 8)
+Geometries 230
+(758, 0.0379, 29)
+Geometries 231
+(331, 0.0165, 6)
+Geometries 232
+(39, 0.15, 6)
+Geometries 233
+(96, 0.05, 5)
+Geometries 234
+(209, 0.0104, 4)
+Geometries 235
+(120, 0.05, 8)
+Geometries 236
+(29, 0.15, 5)
+Geometries 237
+(95, 0.05, 5)
+Geometries 238
+(96, 0.05, 5)
+Geometries 239
+(15, 0.15, 4)
+Geometries 240
+(446, 0.0223, 10)
+Geometries 241
+(254, 0.0127, 4)
+Geometries 242
+(110, 0.05, 6)
+Geometries 243
+(85, 0.05, 5)
+Geometries 244
+(210, 0.0105, 4)
+Geometries 245
+(80, 0.05, 5)
+Geometries 246
+(380, 0.019, 8)
+Geometries 247
+(85, 0.05, 5)
+Geometries 248
+(318, 0.0159, 7)
+Geometries 249
+(753, 0.0376, 29)
+Geometries 250
+(95, 0.05, 5)
+Geometries 251
+(704, 0.0352, 25)
+Geometries 252
+(777, 0.0388, 31)
+Geometries 253
+(197, 0.05, 10)
+Geometries 254
+(816, 0.0408, 34)
+Geometries 255
+(250, 0.0125, 4)
+Geometries 256
+(138, 0.05, 7)
+Geometries 257
+(211, 0.0105, 4)
+Geometries 258
+(100, 0.05, 6)
+Geometries 259
+(86, 0.05, 5)
+Geometries 260
+(80, 0.05, 5)
+Geometries 261
+(47, 0.15, 8)
+Geometries 262
+(95, 0.05, 5)
+Geometries 263
+(275, 0.0137, 4)
+Geometries 264
+(65, 0.05, 4)
+Geometries 265
+(73, 0.05, 4)
+Geometries 266
+(398, 0.0199, 8)
+Geometries 267
+(489, 0.0244, 12)
+Geometries 268
+(99, 0.05, 5)
+Geometries 269
+(80, 0.05, 5)
+Geometries 270
+(209, 0.0104, 4)
+Geometries 271
+(118, 0.05, 6)
+Geometries 272
+(77, 0.05, 4)
+Geometries 273
+(79, 0.05, 4)
+Geometries 274
+(470, 0.0235, 12)
+Geometries 275
+(277, 0.0138, 4)
+Geometries 276
+(152, 0.05, 8)
+Geometries 277
+(231, 0.0115, 4)
+Geometries 278
+(116, 0.05, 6)
+Geometries 279
+(113, 0.05, 6)
+Geometries 280
+(290, 0.0145, 5)
+Geometries 281
+(80, 0.05, 5)
+Geometries 282
+(98, 0.05, 5)
+Geometries 283
+(302, 0.0151, 5)
+Geometries 284
+(791, 0.0395, 32)
+Geometries 285
+(650, 0.0325, 22)
+Geometries 286
+(723, 0.0361, 27)
+Geometries 287
+(133, 0.05, 7)
+Geometries 288
+(457, 0.0228, 11)
+Geometries 289
+(651, 0.0325, 22)
+Geometries 290
+(2028, 0.0203, 42)
+Geometries 291
+(649, 0.0324, 24)
+Geometries 292
+(1307, 0.0131, 18)
+Geometries 293
+(397, 0.0198, 8)
+Geometries 294
+(1563, 0.0156, 25)
+Geometries 295
+(395, 0.0197, 8)
+Geometries 296
+(474, 0.0237, 12)
+Geometries 297
+(355, 0.0177, 7)
+Geometries 298
+(135, 0.05, 9)
+Geometries 299
+(290, 0.0145, 5)
+Geometries 300
+(952, 0.0476, 46)
+Geometries 301
+(988, 0.0494, 49)
+Geometries 302
+(1239, 0.0124, 16)
+Geometries 303
+(141, 0.05, 8)
+Geometries 304
+(575, 0.0287, 17)
+Geometries 305
+(355, 0.0177, 7)
+Geometries 306
+(72, 0.05, 4)
+Geometries 307
+(311, 0.0155, 5)
+Geometries 308
+(156, 0.05, 8)
+Geometries 309
+(79, 0.05, 4)
+Geometries 310
+(237, 0.0118, 4)
+Geometries 311
+(1371, 0.0137, 19)
+Geometries 312
+(3066, 0.0307, 95)
+Geometries 313
+(560, 0.028, 17)
+Geometries 314
+(510, 0.0255, 14)
+Geometries 315
+(180, 0.05, 10)
+Geometries 316
+(1003, 0.01, 11)
+Geometries 317
+(391, 0.0195, 8)
+Geometries 318
+(1090, 0.0109, 12)
+Geometries 319
+(408, 0.0204, 9)
+Geometries 320
+(647, 0.0323, 21)
+Geometries 321
+(694, 0.0347, 25)
+Geometries 322
+(884, 0.0442, 40)
+Geometries 323
+(655, 0.0327, 22)
+Geometries 324
+(472, 0.0236, 12)
+Geometries 325
+(300, 0.015, 5)
+Geometries 326
+(108, 0.05, 6)
+Geometries 327
+(61, 0.05, 4)
+Geometries 328
+(408, 0.0204, 9)
+Geometries 329
+(399, 0.0199, 8)
+Geometries 330
+(318, 0.0159, 6)
+Geometries 331
+(850, 0.0425, 37)
+Geometries 332
+(95, 0.05, 5)
+Geometries 333
+(449, 0.0224, 11)
+Geometries 334
+(463, 0.0231, 11)
+Geometries 335
+(1614, 0.0161, 26)
+Geometries 336
+(635, 0.0317, 21)
+Geometries 337
+(347, 0.0173, 7)
+Geometries 338
+(89, 0.05, 5)
+Geometries 339
+(416, 0.0208, 9)
+Geometries 340
+(389, 0.0194, 8)
+Geometries 341
+(452, 0.0226, 11)
+Geometries 342
+(14, 0.15, 4)
+Geometries 343
+(61, 0.05, 4)
+Geometries 344
+(25, 0.15, 4)
+Geometries 345
+(47, 0.15, 8)
+Geometries 346
+(94, 0.05, 5)
+Geometries 347
+(145, 0.05, 8)
+Geometries 348
+(137, 0.05, 7)
+Geometries 349
+(481, 0.024, 12)
+Geometries 350
+(251, 0.0125, 4)
+Geometries 351
+(13, 0.15, 2)
+Geometries 352
+(2137, 0.0214, 46)
+Geometries 353
+(637, 0.0318, 21)
+Geometries 354
+(582, 0.0291, 17)
+Geometries 355
+(120, 0.05, 7)
+Geometries 356
+(1535, 0.0154, 24)
+Geometries 357
+(496, 0.0248, 14)
+Geometries 358
+(1959, 0.0196, 39)
+Geometries 359
+(132, 0.05, 7)
+Geometries 360
+(180, 0.05, 10)
+Geometries 361
+(93, 0.05, 5)
+Geometries 362
+(135, 0.05, 7)
+Geometries 363
+(97, 0.05, 5)
+Geometries 364
+(226, 0.0113, 4)
+Geometries 365
+(7, 0.15, 2)
+Geometries 366
+(75, 0.05, 4)
+Geometries 367
+(51, 0.05, 4)
+Geometries 368
+(4, 0.15, 2)
+Geometries 369
+(4, 0.15, 2)
