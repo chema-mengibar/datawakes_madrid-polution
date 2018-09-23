@@ -1,14 +1,30 @@
 {
   "info":{
-    "name":"B00_years_v01",
+    "name":"C00_map_v001",
     "version":"1.0",
-    "description":"Files x year and stations",
-    "created":"2018.09.11",
+    "description":"Mapa con las estaciones",
+    "created":"2018.09.12",
     "executed":"",
     "blocked":0
   },
   "params":{},
   "inputs":[
+    {
+      "data_source":"dir",
+      "domain":"master",
+      "collection":"ds-codigos-postales-master",
+      "docs":[
+        "MADRID.geojson"
+      ]
+    },
+    {
+      "data_source":"dir",
+      "domain":"stage",
+      "collection":"A00_extract-zip_v01",
+      "docs":[
+        "stations.csv"
+      ]
+    },
     {
       "data_source":"dir",
       "domain":"stage",
@@ -33,14 +49,6 @@
         "csvs_per_year/madrid_2017.csv",
         "csvs_per_year/madrid_2018.csv"
       ]
-    },
-    {
-      "data_source":"dir",
-      "domain":"stage",
-      "collection":"A00_extract-zip_v01",
-      "docs":[
-        "stations.csv"
-      ]
     }
   ],
   "output":{
@@ -49,5 +57,5 @@
     "collection":"",
     "add_date":false
   },
-  "comment":" 17 files "
+  "comment":""
 }

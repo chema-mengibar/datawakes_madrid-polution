@@ -31,7 +31,7 @@ reporter = Reporter(  ROUTES  )
 
 sys.path.append( currentFullRoute )
 
-# ---------------------------------------------------------------------- CUSTOM LIBS
+#_______________________________________________________________________________ CUSTOM LIBS
 
 from MapService import *
 from math import *
@@ -43,7 +43,7 @@ from math import *
 # from svglib.svglib import SvgRenderer
 # from reportlab.graphics import renderPM
 
-# ---------------------------------------------------------------------- MAIN
+#_______________________________________________________________________________ MAIN
 
 if __name__ == '__main__':
 
@@ -53,26 +53,8 @@ if __name__ == '__main__':
     inputFile =  inputs[0]["path"][ 0 ]
     df_madrid = filewriter.jsonToObj( inputFile )
 
-
-    # postalCode =  df_madrid["features"][ itemCursor ]["properties"]["COD_POSTAL"]
-    # formType =  df_madrid["features"][ itemCursor ]["geometry"]["type"] # Polygon
-
     geometryListPoints = []
-
-    # itemCursor = 150
-    # regionData = {
-    #     "coordinates": df_madrid["features"][ itemCursor ]["geometry"]["coordinates"][0],
-    #     "properties": {
-    #         "postalcode": df_madrid["features"][ itemCursor ]["properties"]["COD_POSTAL"]
-    #     }
-    # }
-    # geometryListPoints.append( regionData )
-
-
-    limit = 3
     for idr, region in  enumerate( df_madrid["features"] ):
-        if idr == limit:
-            break
         if region["geometry"]["type"] == 'MultiPolygon':
             for pol in  region["geometry"]["coordinates"][0]:
                 regionData = {
@@ -93,24 +75,40 @@ if __name__ == '__main__':
             }
             geometryListPoints.append( regionData )
 
+    #___________________________________________________________________________
 
     SVG_PATH = loader.getOutputPath( )["path"] + 'separate.svg'
     PNG_PATH = loader.getOutputPath( )["path"] + 'separate.png'
-
     mapservice = MapService( SVG_PATH, PNG_PATH, 800, 800, geometryListPoints )
-    _dwg = mapservice.getDwg()
+    # mapservice.run()
 
-    # from coordinates to xy
-    _xy = mapservice.mapCoorToXY( geometryListPoints[1]["coordinates"][1]  )
-    CIRCLE = _dwg.circle(center= _xy , r=20, fill="#ffcc00", stroke="none", opacity=0.7 )
-    _dwg.add( CIRCLE )
+    stationsFile =  inputs[1]["path"][ 0 ]
+    df_stations = filewriter.csvToDF( stationsFile )
+    idStation = 15
+    _lon =  df_stations["lon"][ idStation ]
+    _lat =  df_stations["lat"][ idStation ]
 
-    # from mapped-vector to xy
-    _xy = mapservice.mapPointToXY( mapservice.countyBoundaries[0][3]  )
-    CIRCLE = _dwg.circle(center= _xy , r=20, fill="#336699", stroke="none", opacity=0.7 )
-    _dwg.add( CIRCLE )
 
+    xyStacion = ( 1,1 ) # mapservice.mapCoorToXY( ( _lon, _lat ) )
+
+    print mapservice.isPointInPolygon( xyStacion, [( 450,450 ),( 460, 450 ),( 470 ,450   )]   )
+    # print mapservice.getPostalcodeByCoors( xyStacion)
+
+
+    # _dwg = mapservice.getDwg()
+
+
+    # # from coordinates to xy
+    # _xy = mapservice.mapCoorToXY( [ _lon, _lat ]  )
+    # CIRCLE = _dwg.circle(center= _xy , r=20, fill="#ffcc00", stroke="none", opacity=0.7 )
+    # _dwg.add( CIRCLE )
+    #
     # print mapservice.xyPoligons[1]
-    print mapservice.countyBoundaries[0][0].x
-
-    mapservice.saveDwg()
+    # # print mapservice.countyBoundaries[0][0].x
+    #
+    # polygon = mapservice.xyPoligons[1]
+    # tab = [3.5, 1.5 ]
+    # print mapservice.isPointInPolygon( tab, polygon  )
+    #
+    #
+    # mapservice.saveDwg()

@@ -89,6 +89,9 @@ cd [ROOT]/shuttle/satellites/A00_extract-zip_v01
 * urllib
 * urllib2
 * zipfile
+* shapely   
+  - https://pypi.org/project/Shapely/#downloads
+  - https://www.lfd.uci.edu/~gohlke/pythonlibs/#shapely
 
 ---
 
@@ -96,3 +99,7 @@ cd [ROOT]/shuttle/satellites/A00_extract-zip_v01
 
 > #### Centro Nacional de Información Geográfica (CNIG)
 **url:** http://centrodedescargas.cnig.es/CentroDescargas/buscadorCatalogo.do?codFamilia=02122    
+
+> #### Shapely: python module
+http://toblerity.org/shapely/manual.html  
+http://toblerity.org/shapely/project.html

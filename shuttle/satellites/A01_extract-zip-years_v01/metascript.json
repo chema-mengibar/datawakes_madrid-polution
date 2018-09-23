@@ -12,7 +12,7 @@
     {
       "data_source":"dir",
       "domain":"stage",
-      "collection":"S01_A00_extract-zip_v01",
+      "collection":"A00_extract-zip_v01",
       "docs":["csvs_per_year.zip"]
     }
   ],

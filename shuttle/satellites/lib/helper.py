@@ -46,6 +46,15 @@ class Helper(object):
     def allCombinations( self, listNumbers, nunItems ):
         resultsTuples = itertools.combinations( listNumbers, nunItems )
         return [list(elem) for elem in resultsTuples]
-        
 
 
+    def domainRange( self, _domain, _range, _num):
+        '''
+        Linear conversion of a number into a domain to a rangeself.
+        >> print domainRange( (0,100), (500,1000), 50 )  >>  return 750
+        '''
+        oldMin = _domain[0]
+        oldMax = _domain[1]
+        newMin = _range[0]
+        newMax = _range[1]
+        return ( ( (_num - oldMin) * (newMax - newMin) ) / (oldMax - oldMin) ) + newMin

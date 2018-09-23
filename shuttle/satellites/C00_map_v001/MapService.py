@@ -1,6 +1,8 @@
 from math import *
 from decimal import Decimal
 
+from shapely.geometry import Point, Polygon
+
 # https://pypi.org/project/svgwrite/
 # https://svgwrite.readthedocs.io/en/master/
 import svgwrite
@@ -11,6 +13,10 @@ from reportlab.graphics import renderPM
 #https://github.com/fitnr/visvalingamwyatt
 import visvalingamwyatt as vw
 
+class Struct:
+    def __init__(self, **entries):
+        self.__dict__.update(entries)
+
 class Vector( ):
     def __init__( self, _x, _y ):
         self.x = _x
@@ -18,7 +24,9 @@ class Vector( ):
 
 class MapService( ):
 
-    def __init__( self, IMAGE_FILE_PATH, IMAGE_FILE_PATH_PNG , IMAGE_WIDTH_IN_PX, IMAGE_HEIGHT_IN_PX, GEOMETRIES ):
+    def __init__( self, IMAGE_FILE_PATH, IMAGE_FILE_PATH_PNG , IMAGE_WIDTH_IN_PX, IMAGE_HEIGHT_IN_PX, ZONES ):
+        # Globals
+        self.ZONES = ZONES
         # Params
         self.MINIMUM_IMAGE_PADDING_IN_PX = 50
         self.IMAGE_HEIGHT_IN_PX = IMAGE_HEIGHT_IN_PX
@@ -36,24 +44,57 @@ class MapService( ):
         self.IDS = []
         self.CLASSES = []
         self.QUARTERPI = pi / 4.0
-        # Init steps
-        self.dwg = svgwrite.Drawing( IMAGE_FILE_PATH , profile='tiny', size = ( IMAGE_WIDTH_IN_PX , IMAGE_HEIGHT_IN_PX ) )
-        self.step_processCoordinates( GEOMETRIES )
+
+        self.colors = {
+            "background": 'rgb(8,18,41)',
+            "basic": 'rgb(39,52,79)',
+            "white": 'rgb(255,255,255)',
+            "contrast":{
+                "rosa":'rgb(255,4,189)',
+                "blue":'rgb(47,255,199)',
+                "orange":'rgb(255,76,22)',
+                "green":'rgb(26, 204, 44)'
+            },
+            "gradation":[
+                'rgb(255, 200, 107)',
+                'rgb(255, 187, 73)',
+                'rgb(252, 175, 45)',
+                'rgb(211, 132, 0)'
+            ]
+        }
+
+
+    def run( self ):
+        self.step_processCoordinates( self.ZONES )
         self.step_calculateMax()
         self.step_calculateSizes()
-        self.step_drawPoints()
+        self.step_calculateXyPoligons()
+
+    def draw( self ):
+        self.dwg = svgwrite.Drawing( self.IMAGE_FILE_PATH , profile='tiny', size = ( self.IMAGE_WIDTH_IN_PX , self.IMAGE_HEIGHT_IN_PX ) )
+        self.dwg.add( self.dwg.rect(insert=(0, 0), size=('100%', '100%'), rx=None, ry=None, fill= self.colors["background"] ))
+
+        for idl, xyPoligon in enumerate( self.xyPoligons ):
+            shape = self.drawShape( xyPoligon["data"], xyPoligon["config"] )
+            self.dwg.add( shape )
 
     # ----------------------------------------------------------------------------------------------------------- GETTERS
     def getDwg( self ):
         return self.dwg
 
+    def getColors( self ):
+        #@todo: do this recursive
+        colors = Struct(**self.colors)
+        colors.contrast = Struct( **self.colors['contrast'] )
+        #colors.gradation = Struct( **self.colors['gradation'] )
+        return colors
+
     # ----------------------------------------------------------------------------------------------------------- STEPS
-    def step_processCoordinates( self, _GEOMETRIES ):
-        for idg, ZONE_BOUNDARIES in enumerate( _GEOMETRIES ):
+    def step_processCoordinates( self, _ZONES ):
+        print( 'Processing coordinates...' )
+        for idg, ZONE_BOUNDARIES in enumerate( _ZONES ):
 
             lonLat = []
-            print 'Geometries '+ str( idg )
-
             coordinates = ZONE_BOUNDARIES["coordinates"]
             self.IDS.append( ZONE_BOUNDARIES["properties"]["postalcode"] )
 
@@ -61,14 +102,18 @@ class MapService( ):
             self.CLASSES.append( className )
 
             ##------------------------------------------------------------------ Reduce Method 2
-            if len( coordinates ) < 50:
+            #print len( coordinates )
+            if len( coordinates ) <= 70:
+                _ratio =  0.25
+
+            elif len( coordinates ) > 70 and len( coordinates ) < 150:
                 _ratio =  0.15
 
-            elif len( coordinates ) >= 50 and len( coordinates ) < 200:
+            elif len( coordinates ) >= 150 and len( coordinates ) < 500:
                 _ratio =  0.05
 
-            elif len( coordinates ) >= 200 and len( coordinates ) < 1000:
-                _ratio =  round( Decimal( float( len( coordinates ) / 2 ) / float( 10000 ) ) , 4 ) # (714, 0.0714, 51) -> (714, 0.014, x)
+            elif len( coordinates ) >= 500 and len( coordinates ) < 1000:
+                _ratio =  round( Decimal( float( len( coordinates ) / 2 ) / float( 10000 ) ) , 4 )
 
             else:
                 _ratio =  round( Decimal( float( len( coordinates ) ) / float( 100000 ) ) , 4 )
@@ -82,6 +127,7 @@ class MapService( ):
                 self.minXY.y = xy.y if ( self.minXY.y == -1) else min( self.minXY.y, xy.y)
                 lonLat.append( xy );
             self.countyBoundaries.append(lonLat);
+        print( 'Processing coordinates ready' )
 
 
     def step_calculateMax( self ):
@@ -104,20 +150,25 @@ class MapService( ):
         self.widthPadding = (self.IMAGE_WIDTH_IN_PX - ( self.globalRatio * self.maxXY.x)) / 2;
 
 
-    def step_drawPoints( self ):
+    def step_calculateXyPoligons( self ):
         #DOCU: https://svgwrite.readthedocs.io/en/latest/classes/base.html
         for idl, lonLatList in enumerate( self.countyBoundaries ):
-            polygonPoints = []
-            polygonConfig = {
-                "id":"region_" + str( self.IDS[ idl ] ),
-                "class": self.CLASSES[ idl ]
+            polygon = {
+                "meta":{
+                    "postalcode": self.ZONES[ idl ]["properties"]["postalcode"]
+                },
+                "config":{
+                    "id":"region_" + str( self.IDS[ idl ] ),
+                    "class": self.CLASSES[ idl ],
+                },
+                "data": []
             }
             for point in lonLatList:
-                polygonPoints.append( self.mapPointToXY( point ) ) # [ adjustedX, adjustedY ]
+                xyList = self.mapPointToXY( point ) # [ adjustedX, adjustedY ]
+                polygon["data"].append( xyList )
 
-            self.xyPoligons.append( polygonPoints )
-            shape = self.drawShape( polygonPoints, polygonConfig )
-            self.dwg.add( shape )
+            self.xyPoligons.append( polygon )
+
 
 
     # ----------------------------------------------------------------------------------------------------------- POSITION TOOLS
@@ -158,12 +209,28 @@ class MapService( ):
             pathStr += "L "
             pathStr += str( int( coor[0] ) ) + ',' + str( int( coor[1] ) ) + " "
         pathStr += "Z"
-        objPath = self.dwg.path( d = pathStr, fill='#ffffff', stroke= '#000000', stroke_width=1, id= polygonConfig["id"], class_= polygonConfig["class"] )
+        objPath = self.dwg.path( d = pathStr, fill= self.colors["basic"] , stroke= self.colors["background"], stroke_width=1, id= polygonConfig["id"], class_= polygonConfig["class"] )
         #objPath.stroke(  opacity=0.4 )
         return objPath
 
 
     def saveDwg( self ):
         self.dwg.save()
-        # drawing = svg2rlg( self.IMAGE_FILE_PATH )
+        # drawing = svg2rlg( selfIMAGE_FILE_PATH )
         # renderPM.drawToFile( drawing , self.IMAGE_FILE_PATH_PNG )
+
+    # -------------------------------------------------------------------------------------------------------------- EXTENSION:TOUCH
+
+    def isPointInPolygon( self, tap, polygon):
+        _polygon = Polygon( polygon )
+        # linearring = LinearRing(list(polygon.exterior.coords))
+        point = Point( tap[0], tap[1])
+        return _polygon.contains(point)
+
+
+    def getPostalcodeByCoors( self, pointer ):
+        for idr, region in enumerate( self.xyPoligons ):
+            if len( region["data"]) > 2:
+                if self.isPointInPolygon( pointer, region["data"] ):
+                    return idr
+        return -1

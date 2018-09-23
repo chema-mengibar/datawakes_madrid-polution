@@ -1,10 +1,10 @@
 <main>
 
-  <sequence>
+  <sequence id="seq-01">
     <step satellite="A00_extract-zip_v01">
       <step satellite="A01_extract-zip-years_v01">
 
-        <sequence>
+        <sequence id="seq-02">
           <step satellite="B00_years_v01"> </step>
         </sequence>
 
